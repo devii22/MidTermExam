@@ -5,7 +5,7 @@
  */
 package arithmetic;
 
-import java.util.Scanner;
+//import java.util.Scanner;
 
 /** This class takes String input plus,minus,divide and times
  * from user and execute the arithmetic operation
@@ -15,12 +15,18 @@ import java.util.Scanner;
  */
 public class ArithmeticBase 
 {
- public double x,y;
-    double calculate(double x, double y) 
+ public enum Num1{ x}
+ public enum Num2{ y}
+ public ArithmeticBase(Num1 x, Num2 y){
+     this.Num1=n1;
+     this.Num2=n2;
+ }
+ 
+    double calculate(Num1 x, Num2 y) 
         {
-        Scanner sc =new Scanner(System.in);
+        //Scanner sc =new Scanner(System.in);
         System.out.println("Enter arithmetic operation to Perform: ");
-        String s= sc.next();
+        //n1 s= sc.next();
         switch (s.toUpperCase()) 
         {
             case "PLUS":
